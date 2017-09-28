@@ -17,9 +17,8 @@ https://github.com/tch180/-BestChef-Project2
 
 —————— HEROKU
 
-https://dashboard.heroku.com/apps/warm-plateau-58242
+https://warm-plateau-58242.herokuapp.com/
 
 ———————ERD’S
 https://www.canva.com/design/DACiWIbAm7E/c__n1n78KelmxUoyTeJVWA/view?utm_content=DACiWIbAm7E&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
-
 
