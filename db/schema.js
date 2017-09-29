@@ -9,8 +9,6 @@
      {
         name: String,
         description: String,
-        img: String,
-        origin: String,
         prepTime: Number
      }
  )
@@ -50,11 +48,11 @@ const newuser = new Schema(
 })    
   const recipeModel = mongoose.model('recipe', recipeSchema);
   const ingredModel = mongoose.model('ingredients', ingredSchema);
-  const newuserModel = mongoose.model('users', newuserSchema);
+/*   const newuserModel = mongoose.model('users', newuserSchema); */
  //export your recipe with module.exports()
     
  module.exports = { 
      recipeModel: recipeModel,
      ingredModel: ingredModel,
-     newuser: newuserModel,
+   /*   newuser: newuserModel, */
  }
