@@ -24,7 +24,7 @@ const ingredModel = schema.ingredModel;
 
 
 const Marsala = new recipeModel ({name:"Chicken Marsala", description:"Creamy Chicken Marsala", img:"https://i.imgur.com/UIywQQI.jpg?1", origin: "Italy", time: 25, directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing." })
-const Marsalas = new recipeModel ({name:"Chicken Marsala", description:"Creamy Chicken Marsala", img:"https://i.imgur.com/UIywQQI.jpg?1", origin: "Italy", time: 25, directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing." })
+const Greenbean = new recipeModel ({name:"Greenbean Alamdine", description:"Sauteed greenbeans", img:"https://i.imgur.com/UIywQQI.jpg?1", origin: "Italy", time: 25, directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing." })
 
 
 
@@ -40,6 +40,10 @@ recipe.save()
     console.log(error)
 });
     })
+
+
+
+    var newuser = 
 
 
 

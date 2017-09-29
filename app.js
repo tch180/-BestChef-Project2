@@ -10,9 +10,9 @@ var mongoose = require('mongoose');
 
 
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-
+var indexcontroller = require('./routes/indexcontroller');
+var userscontroller = require('./routes/userscontroller');
+var recipescontroller = require('./routes/recipescontroller');
 var app = express();
 
 mongoose.Promise = global.Promise
@@ -38,8 +38,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/', indexcontroller);
+app.use('/users', userscontroller);
+app.use('/users/:userId/recipe', recipescontroller)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
