@@ -1,10 +1,10 @@
  //requirements: require mongoose
  const mongoose = require('mongoose')
  
- //create your donut schema:
+ //create your recipe schema:
  const Schema = mongoose.Schema
 
-
+/* const recipe = [] */
  const ingredSchema = new Schema(
      {
         name: String,
@@ -22,9 +22,14 @@
             directions: String,
             img: String,
             time: Number,
+         recipe:[ingredSchema]   
 
         })
-  const donutModel = mongoose.model('donut', donutSchema);
- //export your donut with module.exports()
- 
- module.exports = donutModel
+  const recipeModel = mongoose.model('recipe', recipeSchema);
+  const ingredModel = mongoose.model('ingredients', ingredSchema);
+ //export your recipe with module.exports()
+    
+ module.exports = { 
+     recipeModel: recipeModel,
+     ingredModel: ingredModel,
+ }

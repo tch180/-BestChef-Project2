@@ -2,7 +2,7 @@
 
 This project was made using MEAN Full stack, 
 
-This App is a recipe application that allows you to create a user. 
+This App is a recipe application that allows you to create a user/s. a 
 
 
 
