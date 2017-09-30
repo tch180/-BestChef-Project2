@@ -24,22 +24,16 @@
 
         })
 
-const newuser = new Schema(
+const registeredusersSchema = new Schema(
     {
         name: {
             type: String,
             required: true,
         },
         id: {
-            type: String,
+            type: Number,
             required: false,
-        },
-        password: {
-            type: String,
-            required: true,
-
-        },
-
+         },
         email: {
             type: String,
             required: true
@@ -48,11 +42,11 @@ const newuser = new Schema(
 })    
   const recipeModel = mongoose.model('recipe', recipeSchema);
   const ingredModel = mongoose.model('ingredients', ingredSchema);
-/*   const newuserModel = mongoose.model('users', newuserSchema); */
+  const registeredusersModel = mongoose.model('users', registeredusersSchema);
  //export your recipe with module.exports()
     
  module.exports = { 
      recipeModel: recipeModel,
      ingredModel: ingredModel,
-   /*   newuser: newuserModel, */
+     registeredusersModel: registeredusersModel, 
  }

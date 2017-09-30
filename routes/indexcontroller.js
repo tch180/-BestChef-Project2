@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 
 
 router.get('/users', function(req, res) {
-  res.render('./users/index');
+  res.render('users/index');
   console.log('hello users')
 });
 
