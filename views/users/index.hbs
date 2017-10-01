@@ -1,8 +1,13 @@
 <h1>User Info</h1>
-{{!-- {{#each users}} --}}
+
 <h1>Users</h1>
+{{#each registeredusers}}
 <div>
-    {{this.name}} -- {{this.email}}
-    {{this._id}} -- {{this.password}}
-</div>
-{{!-- {{/each}} --}}
+    <h1>Name: {{this.name}}</h1> 
+    <h1>Email: {{this.email}}</h1>
+    <h2>Id:{{this._id}}</h2>
+
+</div> 
+<div><button type="button" name="edit" id="" class="btn btn-danger btn-xlg btn-block">Edit</button></div>
+ {{/each}}  
+

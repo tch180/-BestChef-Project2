@@ -62,7 +62,7 @@ app.use(function(err, req, res, next) {
 
 const port = 1337;
 app.listen(port, () => {
-    console.log('----SERVER IS UP AND RUNNIN ON '+ '${port} BOSS', new Date())
+    console.log('----SERVER IS UP AND RUNNIN ON' + "" ,`${port}` + "", 'BOSS', new Date())
 })
 
 module.exports = app;

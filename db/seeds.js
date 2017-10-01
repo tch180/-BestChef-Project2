@@ -154,7 +154,7 @@ registeredusers.forEach((registeredusers) => {
         console.log("SEED: NEW PRODUCTS CREATED!");
         res.redirect('/');
   }); 
- */
+ 
 
 
 //======================
