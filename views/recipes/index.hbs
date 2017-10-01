@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to Best Chef</title>
-</head>
-<body>
-    {{{body}}}
-</body>
-</html>
+<h1>Recipe's</h1><hr>
+
+<h1>Most Popular</h1>
+{{#each recipe  }}
+<div>
+    Name: {{this.name}},<hr><br>
+    description: {{this.description}},<br>
+    directions: {{this.directions}},<br>
+    time: {{this.time}}<br>
+    recipe: {{this.ingredients}}
+       
+</div> 
+<div><button type="button" name="edit" href="recipes/edit" class="btn btn-danger btn-xlg btn-block">Edit</button></div><hr>
+ {{/each}}  
+
