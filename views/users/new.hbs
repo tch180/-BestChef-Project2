@@ -1,0 +1,14 @@
+<form action="/users" method="POST">
+    
+    <label for="name">Name</label>
+    <input type="text" name="first">
+
+    <label for="email">Email</label>
+    <input type="string" name="email">
+
+    <input class="button" type="submit" value="Create">
+</form>
+
+{{#each users}}
+{{body}}
+{{/each}}
