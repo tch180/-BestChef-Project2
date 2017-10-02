@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-      {{#each registereduser}}
-    {{this.registereduser}}
-    {{/each}}
-  </body>
-</html>
+<h1>HELLO</h1>
+
+
+<form action="?_method=PUT" method="POST">
+    
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{user._name}}">
+
+    <label for="email">Email</label>
+    <input type="string" name="email" value="{{user._email}}" >
+    
+    <input type="submit"  name="edit" value="Edit">
+</form>
+
+
