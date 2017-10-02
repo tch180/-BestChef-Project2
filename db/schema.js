@@ -30,10 +30,7 @@ const registeredusersSchema = new Schema(
             type: String,
             required: true,
         },
-        id: {
-            type: Number,
-            required: false,
-         },
+        
         email: {
             type: String,
             required: true

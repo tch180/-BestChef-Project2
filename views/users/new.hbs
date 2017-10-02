@@ -1,14 +1,11 @@
 <form action="/users" method="POST">
     
     <label for="name">Name</label>
-    <input type="text" name="first">
+    <input type="text" name="name">
 
     <label for="email">Email</label>
     <input type="string" name="email">
-
-    <input class="button" type="submit" value="Create">
+    
+    <input type="submit"  value="Create"/>
 </form>
 
-{{#each users}}
-{{body}}
-{{/each}}

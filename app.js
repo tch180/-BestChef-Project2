@@ -7,6 +7,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const methodoverride = require('method-override');
 
 
 const userscontroller = require('./routes/userscontroller');
