@@ -1,19 +1,52 @@
 <h1>Recipe's</h1><hr>
+<div><button type="button" name="edit" onclick="window.location='recipes/new';" class="btn btn-primary btn-lg btn-block">New Recipe</button>
+</div>
+<h1>Most Popular</h1><hr><br>
 
-<h1>Most Popular</h1>
-{{#each recipe  }}
-<div>
-    Name: {{this.name}},<hr><br>
+
+{{#each recipe}}
+<div class="container">
+<div class="row">
+  <div class="col-md-4, row-md-4">
+    <div class="thumbnail">
+      <img src="{{this.image}}" alt="...">
+      <div class="">
+        <h3>Name:{{this.name}}</h3>
+        <p>
+           <h1>Description:{{this.description}}</h1><br>
+
+            <h2>Directions:{{this.directions}}</h2><br>
+           <h2>Time:{{this.time}}</h2> <br>
+        </p>
+        <p><a href="recipes/{{this._id}}/edit" class="btn btn-primary" role="button">Edit</a> <a href="recipes/{{this._id}}/delete" class="btn btn-danger" role="button">Delete</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+{{/each}}
+
+
+
+
+{{!-- 
+
+{{#each recipe   }}
+<div><br>
+
+    Name: {{this.name}},<hr>
     description: {{this.description}},<br>
     directions: {{this.directions}},<br>
     time: {{this.time}}<br>
-    recipe: {{this.ingredients}}
+    
+    image:{{this.image}},
 </div> 
 
 <div>
-<button type="button" name="edit" href="recipes/edit" class="btn btn-danger btn-lg btn-block">Edit</button>
-<button type="button" name="update" href="recipes/edit" class="btn btn-danger btn-lg btn-block">Update</button>
-<button type="button" name="delete" href="recipes/edit" class="btn btn-danger btn-lg btn-block">Delete</button>
 </div><hr><br>
+<button type="button"  name="delete" class="btn btn-danger btn-xlg btn-block" onclick="window.location='recipes/{{this._id}}/delete';"> Delete Recipe</button>
+<button type="button" name="update" class="btn btn-primary btn-xlg btn-block" onclick="window.location='recipes/{{this._id}}/edit';">Edit Recipe</button>
  {{/each}}  
-
+ --}}

@@ -27,7 +27,7 @@ const registeredusersModel = schema.registeredusersModel;
 const Marsala = new recipeModel({
     name: "Chicken Marsala",
     description: "Creamy Chicken Marsala",
-    img: "https://i.imgur.com/UIywQQI.jpg?1",
+    image: "https://i.imgur.com/UIywQQI.jpg?1",
     origin: "Italy",
     time: 25,
     directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing."
@@ -35,7 +35,7 @@ const Marsala = new recipeModel({
 const Greenbean = new recipeModel({
     name: "Greenbean Alamdine",
     description: "Sauteed greenbeans",
-    img: "https://i.imgur.com/UIywQQI.jpg?1",
+    image: "https://i.imgur.com/UIywQQI.jpg?1",
     origin: "Italy",
     time: 25,
     directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing."
@@ -73,6 +73,7 @@ const chickenBreast = new ingredModel({
     name: "Chicken Breast",
     description: "Farm Raised NoN GMO and RBGH-1 free ",
     prepTime: 25,
+    img: 'https://i.imgur.com/UIywQQI.jpg?1'
 });
 const heavyCream = new ingredModel({
     name: "Heavy Whipping Cream",
@@ -111,6 +112,7 @@ recipesingred.forEach((recipesingred) => {
             console.log(error)
         });
 });
+
 
 
 const bob = new registeredusersModel({

@@ -1,0 +1,32 @@
+<article>hello recipe edits </article>
+
+<form action="/recipes/?_method=PUT" method="POST">
+ 
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{recipe.name}}">
+
+    <label for="description">description</label>
+    <input type="string" name="description" value="{{recipe.description}}">
+
+    <label for="directions">directions</label>
+    <inpput type="string" name="directions" value="{{recipe.directions}}">
+    
+    
+    <label for="image">Pictures</label>
+    <input type="string" name="image" imgsrc="{{recipe.image}}">
+
+    <label for="description">Time</label>
+    <input type="string" name="time" value="{{recipe.time}}" >
+    
+    <label for="description">Ingredients</label>
+    <input type="string" name="Ingredients" value="{{recipe.data}}" >
+    
+    
+
+
+    <input type="submit"  name="edit" value="Edit">
+    
+</form>
+
+   
+

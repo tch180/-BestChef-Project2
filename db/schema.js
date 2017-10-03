@@ -18,7 +18,7 @@
             name: String,
             description: String,
             directions: String,
-            img: String,
+            image:  String,
             time: Number,
          recipe:[ingredSchema]   
 
