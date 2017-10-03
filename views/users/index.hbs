@@ -3,7 +3,7 @@
 <h1>User Info</h1><hr>
 
 <h1>User</h1>
-<button type="button" name="edit" onclick="window.location='users/new';" class="btn btn-primary btn-lg btn-block">NEW USER</button>
+{{!-- <button type="button" name="edit" onclick="window.location='users/new';" class="btn btn-primary btn-lg btn-block">NEW USER</button>
 {{#each registeredusers}}
 <div>
     <h1>Name: {{this.name}}</h1> 
@@ -14,8 +14,30 @@
 <button type="button" name="update" class="btn btn-primary btn-xlg btn-block" onclick="window.location='users/{{this._id}}/edit';">Edit User</button>
 {{/each}}  
 
-
+</div>  --}}
+<button type="button" name="edit" onclick="window.location='users/new';" class="btn btn-primary btn-lg btn-block">NEW USER</button>
+<div class="row"></div>
+{{#each registeredusers}}
+   
+        <div class="col s12 m7">
+            
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/office.jpg">
+    </div>
+     <div class="card-content"  >
+      <span class="card-title activator grey-text text-darken-4">{{this.name}}<i class="material-icons right">Email:{{this.email}}</i></span>
+      <p><a  href="users/{{this._id}}/edit">Edit</a></p><p><a  href="users/{{this._id}}/delete">Delete</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{this.name}}<i class="material-icons right">{{this.email}}</i></span>
  
 
-
 </div> 
+ {{/each}}
+  </div>
+
+
+
+
+     
