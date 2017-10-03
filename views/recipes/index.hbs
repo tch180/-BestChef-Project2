@@ -21,6 +21,15 @@
 
             <h2>Directions:{{this.directions}}</h2><br>
            <h2>Time:{{this.time}}</h2> <br>
+           <h2>Ingredients: </h2>
+           <ul>
+           <div>  {{#each this.ingredients}} 
+                <li>{{this.name}}</li>
+                <li>{{this.description}}</li>
+                <li>{{this.preptime}}</li>
+              {{/each}}
+              </ul>
+              </div>
         </p>
         <p><a href="recipes/{{this._id}}/edit" class="btn btn-primary" role="button">Edit</a> <a href="recipes/{{this._id}}/delete" class="btn btn-danger" role="button">Delete</a></p>
       </div>
