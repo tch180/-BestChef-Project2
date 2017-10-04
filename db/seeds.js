@@ -1,8 +1,14 @@
 require('dotenv').config();
 
+///////////////////////
+//Express & Router 
+///////////////////////
 var express = require("express");
 var router = express.Router();
 
+///////////////////////
+//Mongoose & Schemas 
+///////////////////////
 var mongoose = require("mongoose");
 var schema = require("./schema.js");
 
@@ -23,6 +29,11 @@ db.once('open', () => {
     console.log('Connected to MongoDB! Surprised? Me too!')
 })
 
+
+
+///////////////////////
+//Models 
+///////////////////////
 
 const recipeModel = schema.recipeModel;
 const ingredModel = schema.ingredModel;
@@ -178,7 +189,7 @@ registeredusers.forEach((registeredusers) => {
 
 
 
-/
+
   recipe.create(newRecipe, function(err) {
         console.log("SEED: NEW PRODUCTS CREATED!");
         res.redirect('/');
