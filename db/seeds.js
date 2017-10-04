@@ -32,7 +32,7 @@ const Marsala = new recipeModel({
     time: 25,
     directions: "Minim fugiat enim sit pariatur ex dolor ad quis consequat nulla esse dolor occaecat. Nostrud qui sit incididunt veniam ea quis fugiat cillum elit cillum commodo nisi occaecat. Elit enim dolor enim aliqua amet adipisicing.",
     ingredients: [ingredModel],
-    
+
 });
 const Greenbean = new recipeModel({
     name: "Greenbean Alamdine",
@@ -59,7 +59,7 @@ const MeatLoaf = new recipeModel({
     origin: "fusion food",
     time: 2.5,
     directions: "Ut et elit ipsum est ex eu amet exercitation id ut eiusmod minim officia nisi.",
-    ingredients: [ingredModel]  
+    ingredients: [ingredModel]
 });
 
 
@@ -74,7 +74,7 @@ const heavyCream = new ingredModel({
     name: "Heavy Whipping Cream",
     description: "Ultra Pasturized Heavy Cream, Great for cooking and sauces ",
     prepTime: 5,
-    
+
 });
 const marsalaWine = new ingredModel({
     name: "Marsala Wine",

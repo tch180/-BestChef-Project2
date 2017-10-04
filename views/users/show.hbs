@@ -1,15 +1,15 @@
 <h1>HELLO</h1>
 
-
+{{#each registeredusers}}
 <form action="?_method=PUT" method="POST">
     
     <label for="name">Name</label>
-    <input type="text" name="name" value="{{user._name}}">
+    <input type="text" name="name" value="{{user.name}}">
 
     <label for="email">Email</label>
-    <input type="string" name="email" value="{{user._email}}" >
+    <input type="string" name="email" value="{{user.email}}" >
     
     <input type="submit"  name="edit" value="Edit">
 </form>
-
+{{/each}}
 

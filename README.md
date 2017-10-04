@@ -2,7 +2,9 @@
 
 This project was made using MEAN Full stack, 
 
-This App is a recipe application that allows you to create a user/s. a 
+This App is a recipe application that allows you to create a user as well as recipes. 
+
+The idea is to have an executive chef or simliar log on to the app and create recipes and to eventually be able to push that out to his team. 
 
 
 

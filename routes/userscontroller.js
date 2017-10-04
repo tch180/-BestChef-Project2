@@ -10,16 +10,16 @@ const methodoverride = require('method-override');
 
 // INDEX GET users listing. 
 router.get('/', (request, response) => {
-  registeredusers.find({})
-    .then((registeredusers) => {
-      response.render('users/index', {
-        registeredusers: registeredusers
+    registeredusers.find({})
+      .then((registeredusers) => {
+        response.render('users/index', {
+          registeredusers: registeredusers
+        })
       })
-    })
-    .catch((error) => {
-      console.log('error')
-    })
-}),
+      .catch((error) => {
+        console.log('error')
+      })
+  }),
 
 
   //NEW ROUTE 
@@ -60,8 +60,8 @@ router.put('/:userId', (req, res) => {
   const userId = req.params.userId
   const updatedUser = req.body
   registeredusers.findByIdAndUpdate(userId, updatedUser, {
-    new: true
-  })
+      new: true
+    })
     .then(() => {
       res.redirect(`/users/${userId}`)
       userId: userId
