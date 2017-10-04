@@ -5,7 +5,11 @@ const recipe = Schema.recipeModel;
 const ingredients = Schema.ingredModel;
 const methodoverride = require('method-override');
 
-//INDEX
+
+
+///////////////////////
+// Index Route 
+///////////////////////
 router.get('/', (request, response) => {
   recipe.find({})
     .then((recipe) => {
@@ -19,14 +23,21 @@ router.get('/', (request, response) => {
 });
 
 
-// new 
+
+
+///////////////////////
+// New Route 
+///////////////////////
 router.get('/new', (req, res)=>{
   res.render('recipes/new')
 })
 
 
 
-//CREATE ROUTE
+
+///////////////////////
+//Create Route 
+///////////////////////
 router.post('/', (req, res) => {
   const newRecipe = req.body
   recipe.create(newRecipe)
@@ -38,7 +49,10 @@ router.post('/', (req, res) => {
     })
 })
 
-//EDIT Recipes route 
+
+///////////////////////
+//Edit Route 
+///////////////////////
 router.get('/:recipeId/edit', (req, res) => {
   const recipeId = req.params.recipeId
   recipe.findById(recipeId)
@@ -53,13 +67,14 @@ router.get('/:recipeId/edit', (req, res) => {
     })
 })
 
-// Delete route 
+
+
+///////////////////////
+// Delete Route 
+///////////////////////
 router.get('/:recipeId/delete', (req, res) => {
-
   const recipeId = req.params.recipeId
-
-
-  recipe.findByIdAndRemove(recipeId)
+    recipe.findByIdAndRemove(recipeId)
     .then((recipes) => {
       res.redirect('/recipes')
     })

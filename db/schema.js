@@ -4,6 +4,9 @@
  //create your recipe schema:
  const Schema = mongoose.Schema
 
+///////////////////////
+//INGREDIENTS SCHEMA
+///////////////////////
 
  const ingredSchema = new Schema({
      name: String,
@@ -11,6 +14,9 @@
      prepTime: Number,
  })
 
+///////////////////////
+//RECIPES SCHEMA
+///////////////////////
  const recipeSchema = new Schema({
      name: String,
      description: String,
@@ -20,7 +26,10 @@
      ingredients: [ingredSchema]
 
  })
-
+ 
+///////////////////////
+//USERS SCHEMA
+///////////////////////
  const registeredusersSchema = new Schema({
      name: {
          type: String,

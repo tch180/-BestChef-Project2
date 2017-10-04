@@ -6,6 +6,12 @@ var router = express.Router();
 var mongoose = require("mongoose");
 var schema = require("./schema.js");
 
+
+
+
+///////////////////////
+// DataBase Connection
+///////////////////////
 mongoose.connect(process.env.MONGODB_URI)
 
 
@@ -24,6 +30,9 @@ const registeredusersModel = schema.registeredusersModel;
 
 
 
+///////////////////////
+//  Recipe Model 
+///////////////////////
 const Marsala = new recipeModel({
     name: "Chicken Marsala",
     description: "Creamy Chicken Marsala",
@@ -63,6 +72,9 @@ const MeatLoaf = new recipeModel({
 });
 
 
+///////////////////////
+//  Ingredients Model
+///////////////////////
 
 const chickenBreast = new ingredModel({
     name: "Chicken Breast",
@@ -126,6 +138,10 @@ recipes.forEach((recipe) => {
 
 
 
+///////////////////////
+//  Users Models
+///////////////////////
+
 const bob = new registeredusersModel({
     name: "bob, Smith",
 
@@ -162,7 +178,7 @@ registeredusers.forEach((registeredusers) => {
 
 
 
-/* 
+/
   recipe.create(newRecipe, function(err) {
         console.log("SEED: NEW PRODUCTS CREATED!");
         res.redirect('/');
@@ -172,6 +188,6 @@ registeredusers.forEach((registeredusers) => {
 
 //======================
 // EXPORTS
-//====================== */
+//====================== 
 /* module.exports = router; */
 db.close();

@@ -3,12 +3,12 @@ var router = express.Router();
 const Schema = require("../db/schema.js");
 const registeredusers = Schema.registeredusersModel;
 const methodoverride = require('method-override');
+ 
 
 
-
-
-
-// INDEX GET users listing. 
+///////////////////////
+// INDEX ROUTE 
+///////////////////////
 router.get('/', (request, response) => {
     registeredusers.find({})
       .then((registeredusers) => {
@@ -22,13 +22,18 @@ router.get('/', (request, response) => {
   }),
 
 
-  //NEW ROUTE 
+///////////////////////
+// NEW ROUTE 
+///////////////////////
   router.get('/new', (req, res) => {
     res.render('users/new')
   });
 
 
-//CREATE ROUTE
+
+///////////////////////
+// CREATE ROUTE 
+///////////////////////
 router.post('/', (req, res) => {
   const newUser = req.body
   registeredusers.create(newUser)
@@ -40,7 +45,9 @@ router.post('/', (req, res) => {
     })
 })
 
-// EDIT 
+///////////////////////
+// EDIT ROUTE 
+///////////////////////
 router.get('/:userId/edit', (req, res) => {
   const userId = req.params.userId
   registeredusers.findById(userId)
@@ -55,7 +62,10 @@ router.get('/:userId/edit', (req, res) => {
     })
 })
 
-//UPDATE ROUTE 
+
+///////////////////////
+// UPDATE ROUTE 
+///////////////////////
 router.put('/:userId', (req, res) => {
   const userId = req.params.userId
   const updatedUser = req.body
@@ -68,8 +78,9 @@ router.put('/:userId', (req, res) => {
     })
 })
 
-
-// SHOW route 
+///////////////////////
+// SHWO ROUTE 
+///////////////////////
 router.get('/:userId', (req, res) => {
   const userId = req.params.userId
   registeredusers.findById(userId)
@@ -85,7 +96,9 @@ router.get('/:userId', (req, res) => {
 })
 
 
-//Delete
+///////////////////////
+// DELETE ROUTE 
+///////////////////////
 router.get('/:userId/delete', (req, res) => {
 
   const userId = req.params.userId
