@@ -1,7 +1,13 @@
- //requirements: require mongoose
+///////////////////////
+//Require Mongoose
+///////////////////////
  const mongoose = require('mongoose')
 
- //create your recipe schema:
+
+
+///////////////////////
+//Create Schema 
+///////////////////////
  const Schema = mongoose.Schema
 
 ///////////////////////
@@ -26,6 +32,11 @@
      ingredients: [ingredSchema]
 
  })
+
+
+///////////////////////
+//
+///////////////////////
  
 ///////////////////////
 //USERS SCHEMA
@@ -42,11 +53,20 @@
      },
 
  })
+
+
+///////////////////////
+//Models 
+///////////////////////
  const recipeModel = mongoose.model('recipe', recipeSchema);
  const ingredModel = mongoose.model('ingredients', ingredSchema);
  const registeredusersModel = mongoose.model('users', registeredusersSchema);
  //export your recipe with module.exports()
 
+
+///////////////////////
+//Export Models 
+///////////////////////
  module.exports = {
      recipeModel: recipeModel,
      ingredModel: ingredModel,
