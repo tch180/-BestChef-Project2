@@ -1,8 +1,25 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image:url("https://i.imgur.com/NCTOjV4.jpg");
 }
 
 a {
   color: #00B7FF;
+}
+h1  {
+color: rgb(255, 253, 253);
+text-align: center;
+}
+p{
+  color: rgb(255, 253, 253) 
+}
+
+input {
+  color: rgb(255, 253, 253)
+}
+div {
+  display: block;
+  background-color: rgb(112, 111, 111);
+
 }
